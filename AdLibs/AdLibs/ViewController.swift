@@ -10,11 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var themeHelper: ThemeHelper?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    func setTheme() {
+        guard let theme = themeHelper?.themePreference else { return }
+        switch theme {
+        case "Blue":
+            view.backgroundColor = .blue
+        case "Dark":
+            view.backgroundColor = .darkGray
+        case "Green":
+            view.backgroundColor = .systemGreen
+        case "Purple":
+            view.backgroundColor = .systemPurple
+        case "Teal":
+            view.backgroundColor = .systemTeal
+        default:
+            break
+        }
+    }
 }
 
+extension ViewController: ThemeSelectedDelegate {
+    func themeChosen() {
+        setTheme()
+    }
+}

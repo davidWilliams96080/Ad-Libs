@@ -63,21 +63,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="puO-wa-lp5">
-                                <rect key="frame" x="156.5" y="271" width="101" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgV-fw-DTG">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
-                                        <state key="normal" title="Ad-lib"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8f-dQ-wWB">
-                                        <rect key="frame" x="0.0" y="50" width="101" height="30"/>
-                                        <state key="normal" title="Random ad-lib"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="s5o-DU-sKK">
-                                <rect key="frame" x="12" y="451" width="390" height="264"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="s5o-DU-sKK">
+                                <rect key="frame" x="12" y="401" width="390" height="264"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a noun" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="skm-ss-xFU">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="34"/>
@@ -111,14 +98,25 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGn-bw-bFU">
+                                <rect key="frame" x="176" y="232" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgV-fw-DTG">
+                                <rect key="frame" x="67" y="233" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ad-lib"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8f-dQ-wWB">
+                                <rect key="frame" x="238" y="232" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Random ad-lib"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="H86-RE-17I" firstAttribute="trailing" secondItem="s5o-DU-sKK" secondAttribute="trailing" constant="12" id="Gx4-rv-jz4"/>
-                            <constraint firstItem="puO-wa-lp5" firstAttribute="centerX" secondItem="sHB-Q8-n9I" secondAttribute="centerX" id="HSW-Ev-8NF"/>
-                            <constraint firstItem="puO-wa-lp5" firstAttribute="top" secondItem="H86-RE-17I" secondAttribute="top" constant="227" id="Nif-Xo-gq4"/>
                             <constraint firstItem="s5o-DU-sKK" firstAttribute="leading" secondItem="H86-RE-17I" secondAttribute="leading" constant="12" id="heO-uT-7un"/>
-                            <constraint firstItem="s5o-DU-sKK" firstAttribute="top" secondItem="puO-wa-lp5" secondAttribute="bottom" constant="100" id="nuW-5Z-Hmw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H86-RE-17I"/>
                     </view>
@@ -188,12 +186,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f03-Fm-69d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="210" y="138"/>
         </scene>
         <!--Settings-->
         <scene sceneID="xAe-ro-DYW">
             <objects>
-                <viewController title="Settings" id="ghw-e1-FOz" sceneMemberID="viewController">
+                <viewController title="Settings" id="ghw-e1-FOz" customClass="SettingsViewController" customModule="AdLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jP0-ZE-8Vc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,13 +206,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6g-px-49Y">
-                                        <rect key="frame" x="0.0" y="43.5" width="320" height="216"/>
+                                        <rect key="frame" x="0.0" y="44" width="320" height="216"/>
                                     </pickerView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-PF-lFD">
                                 <rect key="frame" x="185" y="747" width="44" height="30"/>
                                 <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="selectSettingsButtonTapped:" destination="ghw-e1-FOz" eventType="touchUpInside" id="hTu-Mg-Dee"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JP0-Ua-fjx" userLabel="Story Choice Stack View">
                                 <rect key="frame" x="94.5" y="143.5" width="225" height="144"/>
@@ -294,12 +295,21 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LmG-uW-uZO">
                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="31"/>
+                                                <connections>
+                                                    <action selector="story1Switch:" destination="ghw-e1-FOz" eventType="valueChanged" id="rgS-aM-kNN"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SAi-g2-wov">
                                                 <rect key="frame" x="91" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="story2Switch:" destination="ghw-e1-FOz" eventType="valueChanged" id="zNe-mG-Ljs"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Aay-Q1-6hk">
                                                 <rect key="frame" x="176" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="story3Switch:" destination="ghw-e1-FOz" eventType="valueChanged" id="HMY-aU-akM"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -316,10 +326,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H26-Xo-DHk"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView1" destination="Jcu-NA-Ynt" id="ZuG-la-KIg"/>
+                        <outlet property="imageView2" destination="dwg-bl-Nhh" id="jqq-1K-V42"/>
+                        <outlet property="imageView3" destination="2CT-9i-sqO" id="6cT-i1-YRU"/>
+                        <outlet property="storyLabel1" destination="Sbo-HY-okR" id="2mi-AS-raE"/>
+                        <outlet property="storyLabel2" destination="lNE-ew-tEX" id="CNA-Ul-es5"/>
+                        <outlet property="storyLabel3" destination="tJd-Vb-ToF" id="Pko-gL-C2W"/>
+                        <outlet property="themePicker" destination="w6g-px-49Y" id="MFD-Gf-KH9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAx-hw-JQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="822.99107142857144"/>
+            <point key="canvasLocation" x="209" y="823"/>
         </scene>
         <!--Information-->
         <scene sceneID="JAa-en-eI7">
@@ -328,7 +347,22 @@
                     <view key="view" contentMode="scaleToFill" id="Ist-Zl-28w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="enter informational text programatically" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rZ1-rE-LlO">
+                                <rect key="frame" x="12" y="56" width="390" height="794"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3qk-9h-etb" firstAttribute="bottom" secondItem="rZ1-rE-LlO" secondAttribute="bottom" constant="12" id="LKo-1Z-J9x"/>
+                            <constraint firstItem="rZ1-rE-LlO" firstAttribute="leading" secondItem="3qk-9h-etb" secondAttribute="leading" constant="12" id="ZRQ-aM-zqU"/>
+                            <constraint firstItem="rZ1-rE-LlO" firstAttribute="top" secondItem="3qk-9h-etb" secondAttribute="top" constant="12" id="gCp-b1-o6K"/>
+                            <constraint firstItem="3qk-9h-etb" firstAttribute="trailing" secondItem="rZ1-rE-LlO" secondAttribute="trailing" constant="12" id="h02-vr-S5b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3qk-9h-etb"/>
                     </view>
                 </viewController>
