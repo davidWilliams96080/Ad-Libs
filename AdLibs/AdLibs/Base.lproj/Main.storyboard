@@ -163,10 +163,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rG3-ye-XWL"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="dY7-LG-8aD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="mHv-gf-IIS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gqy-Mt-Gdg"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eca-tH-tMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2734.7826086956525" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2728" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jzg-hm-8Vw">
@@ -249,6 +253,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAK-EE-200" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1899" y="823"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ANR-C4-LZx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aOe-VP-wbJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Ix-2E-GD8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OLh-J4-u9J" kind="relationship" relationship="rootViewController" id="mNL-GY-zHG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjg-fh-9er" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2726" y="-556"/>
         </scene>
     </scenes>
     <resources>
